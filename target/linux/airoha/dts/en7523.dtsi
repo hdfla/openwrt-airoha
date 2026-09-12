@@ -78,7 +78,7 @@
 			opp-supported-hw = <AIROHA_CPU_HW_1G>;
 		};
 
-		opp-700000000 {
+		opp-7000000000 {
 			opp-hz = /bits/ 64 <700000000>;
 			opp-supported-hw = <AIROHA_CPU_HW_1G>;
 		};
@@ -219,7 +219,7 @@
 		its: gic-its@09020000 {
 			compatible = "arm,gic-v3-its";
 			msi-controller;
-			#msi-cells = <1>;
+			#msi-cell = <1>;
 			reg = <0x090200000 0x20000>;
 		};
 	};
@@ -663,7 +663,7 @@
 		      <0x1fa95700 0x568>;
 		reg-names = "pcie0", "pcie1";
 		#phy-cells = <0>;
-		airoha,chip-scu = <&chip_scu>;
+		airoha,chip_scu = <&chip_scu>;
 	};
 
 	pcie0: pcie@1fa91000 {
