@@ -143,6 +143,16 @@ define Device/skyworth_gn630v
 endef
 TARGET_DEVICES += skyworth_gn630v
 
+define Device/teleq_xpon
+  $(Device/Uboot-FitImage)
+  DEVICE_VENDOR := TELEQ
+  DEVICE_MODEL := XPON
+  DEVICE_PACKAGES += hostapd-mbedtls wpa-supplicant-mbedtls \
+                     kmod-mt7915e kmod-mt7916-firmware airoha-en7523-kite-npu-firmware \
+                     airoha-en7571-firmware
+endef
+TARGET_DEVICES += teleq_xpon
+
 define Device/tplink_ex530v-v1
   $(Device/Uboot-FitImage)
   DEVICE_VENDOR := TP-Link
