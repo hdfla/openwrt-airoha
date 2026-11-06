@@ -210,6 +210,11 @@ mtd3:	0x00100000-0x6dc00000 : UBI (uboot env{1,2} + fit (firmware))
 			nvmem-cells = <&ubootenv_ethaddr 3>;
 			nvmem-cell-names = "mac-address";
 		};
+
+		led {
+			led-sources = <2>;
+			led-active-low;
+		};
 	};
 };
 
