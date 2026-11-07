@@ -267,6 +267,10 @@ mtd3:	0x00100000-0x6dc00000 : UBI (uboot env{1,2} + fit (firmware))
 	nvmem-cell-names = "mac-address";
 };
 
+&gdma {
+	status = "disabled";
+};
+
 &switch {
 	status = "okay";
 };
