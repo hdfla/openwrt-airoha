@@ -287,11 +287,6 @@
 	status = "okay";
 };
 
-&gsw_port6 {
-	nvmem-cells = <&macaddr 0>;
-	nvmem-cell-names = "mac-address";
-};
-
 &gsw_phy1 {
 	status = "okay";
 };
