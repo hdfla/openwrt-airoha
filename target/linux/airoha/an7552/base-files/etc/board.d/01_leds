@@ -22,6 +22,14 @@ case "$board" in
     ucidef_set_led_default "pon" "PON" "green:xpon-7" "0"
     ucidef_set_led_netdev "internet" "Internet" "green:wan-online-20" "pon0" "link tx rx"
     ;;
+  sdmc,npe3036gv)
+    ucidef_set_led_netdev "lan1" "lan1" "mt7530-0:09:green:lan" "lan1" "link tx rx"
+    ucidef_set_led_netdev "lan2" "lan2" "mt7530-0:0a:green:lan" "lan2" "link tx rx"
+    ucidef_set_led_netdev "lan3" "lan3" "mt7530-0:0b:green:lan" "lan3" "link tx rx"
+    ucidef_set_led_netdev "lan4" "lan4" "mt7530-0:0c:green:lan" "lan4" "link tx rx"
+    ucidef_set_led_netdev "phy0-ap0" "phy0-ap0" "mt76-phy0" "phy0-ap0" "link tx rx"
+    ucidef_set_led_netdev "phy1-ap0" "phy1-ap0" "mt76-phy1" "phy1-ap0" "link tx rx"    
+    ;;
 esac
 
 board_config_flush
