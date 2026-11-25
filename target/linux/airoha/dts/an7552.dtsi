@@ -81,7 +81,10 @@
 			reg = <0x0>;
 			operating-points-v2 = <&cpu_opp_table>;
 			enable-method = "psci";
-			clock-frequency = <80000000>;
+			clocks = <&cpufreq>;
+			clock-names = "cpu";
+			power-domains = <&cpufreq>;
+			power-domain-names = "perf";
 			next-level-cache = <&L2_0>;
 			#cooling-cells = <2>;
 		};
@@ -92,7 +95,10 @@
 			reg = <0x1>;
 			operating-points-v2 = <&cpu_opp_table>;
 			enable-method = "psci";
-			clock-frequency = <80000000>;
+			clocks = <&cpufreq>;
+			clock-names = "cpu";
+			power-domains = <&cpufreq>;
+			power-domain-names = "perf";
 			next-level-cache = <&L2_0>;
 			#cooling-cells = <2>;
 		};
@@ -282,7 +288,8 @@
 		      <0x09600000 0x20000>;
 		interrupt-controller;
 		#interrupt-cells = <3>;
-		#address-cells = <0>;
+		#address-cells = <1>;
+		#size-cells = <1>;
 		interrupts = <GIC_PPI 9 IRQ_TYPE_LEVEL_LOW>;
 	};
 
